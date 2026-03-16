@@ -119,5 +119,24 @@ export class StepCounter extends Counter {
     }
 
     // Update increment and decrement methods
+        increment() {
+
+        this.count += this.step;
+        this.update();
+
+    }
+
+    decrement() {
+
+        if (this.count >= this.step) {
+            this.count -= this.step;
+        } else {
+            this.count = 0;
+        }
+
+        this.update();
+
+    }
+
 
 }
