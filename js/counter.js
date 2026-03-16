@@ -1,8 +1,16 @@
 export class Counter {
 
-    constructor(selector, initialValue=0) {
+    constructor(selector, initialValue = 0) {
         this.count = initialValue;
         this.selector = selector;
+        this.handleIncrementClick = this.handleIncrementClick.bind(this);
+        this.handleDecrementClick = this.handleDecrementClick.bind(this);
+        this.handleResetClick = this.handleResetClick.bind(this);
+
+        if (this.count < 0) {
+            this.count = 0;
+        }
+
         this.mount();
     }
 
@@ -15,6 +23,11 @@ export class Counter {
         this.decrementButton = document.createElement('button');
         this.resetButton = document.createElement('button');
 
+        this.display.classList.add('counter-display');
+        this.incrementButton.classList.add('counter-button');
+        this.decrementButton.classList.add('counter-button');
+        this.resetButton.classList.add('counter-button');
+
         this.incrementButton.textContent = 'Increment';
         this.decrementButton.textContent = 'Decrement';
         this.resetButton.textContent = 'Reset';
@@ -24,11 +37,29 @@ export class Counter {
         container.appendChild(this.decrementButton);
         container.appendChild(this.resetButton);
 
-        this.incrementButton.addEventListener('click', () => this.increment());
-        this.decrementButton.addEventListener('click', () => this.decrement());
-        this.resetButton.addEventListener('click', () => this.reset());
+        this.incrementButton.addEventListener('click', this.handleIncrementClick);
+        this.decrementButton.addEventListener('click', this.handleDecrementClick);
+        this.resetButton.addEventListener('click', this.handleResetClick);
 
         this.update();
+
+    }
+
+    handleIncrementClick() {
+
+        this.increment();
+
+    }
+
+    handleDecrementClick() {
+
+        this.decrement();
+
+    }
+
+    handleResetClick() {
+
+        this.reset();
 
     }
 
