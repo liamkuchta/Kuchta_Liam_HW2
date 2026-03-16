@@ -70,11 +70,13 @@ export class Counter {
 
     }
 
-    decrement() {
+   decrement() {
 
         // Needs an if statement to stop from going below 0
+        if (this.count > 0) {
             this.count--;
             this.update();
+        }
 
         return;
 
