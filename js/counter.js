@@ -94,6 +94,13 @@ export class Counter {
         this.display.textContent = `Count: ${this.count}`;
 
         // Add toggling button styles if count reaches 0
+        if (this.count === 0) {
+            this.decrementButton.classList.add('is-inactive');
+            this.resetButton.classList.add('is-inactive');
+        } else {
+            this.decrementButton.classList.remove('is-inactive');
+            this.resetButton.classList.remove('is-inactive');
+        }
 
     }
 
