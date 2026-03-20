@@ -1,13 +1,16 @@
 #header {
     
     background-color: #000000e3;
-   
+   display: flex;
      border-bottom: 1px solid #ffee00;
     margin-bottom: 80px;
     min-height: 80px;
+     align-items: center;
+    justify-content: center;
 }
 
 #title {
     text-align: center;
     color: #ffee00;
+    margin: 0;
 }
