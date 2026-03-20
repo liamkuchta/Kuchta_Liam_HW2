@@ -1,7 +1,9 @@
 .counter {
-  background-color: #f9fbfd;
+  background-color: #2f2b00;
   margin-top: 20px;
     padding: 20px;
+    border: 3px solid #ffee00;
+    border-radius: 13px;
 }
 
 .counter-display {
@@ -11,8 +13,8 @@
 }
 
 .counter-button {
-  background-color: #ffee00;
-    border: none;
+  background-color: #6a6300;
+    border: 2px solid #ffee00;
   border-radius: 10px;
     color: #000000;
     letter-spacing: 1px;
@@ -22,8 +24,9 @@
 }
 
 .is-inactive {
-  background-color: #b9c3c9;
-  color: #edf2f4;
+  background-color:#2f2b00;
+  color: #5d5d5d;
+   border: 2px solid #4b4600;
 }
 
 @media screen and (min-width: 768px) {
