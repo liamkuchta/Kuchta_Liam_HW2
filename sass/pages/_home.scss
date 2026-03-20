@@ -1,8 +1,27 @@
+body {
+	
+	 background: radial-gradient(circle at top left, #000000 0%, #343717 40%, #000000 100%);
+	color: #ffffff;
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.info-panel {
+	background-color: #00000037;
+border: 1px solid #ffee00;
+	padding: 24px;
+	border-radius: 20px;
+	
+}
+
 .sample-code {
-	background-color:#318e5c;
+	background-color:#000000;
 	border-radius: 12px;
-	color: #f4f6fb;
+	color: #ffee00;
+	font-family: monospace;
+	border: 1px solid #ffee00;
 	font-size: 14px;
 	margin-bottom: 16px;
+	overflow-x: auto;
 	padding: 16px;
+	white-space: pre-wrap;
 }
