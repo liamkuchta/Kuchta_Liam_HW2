@@ -78,7 +78,7 @@ export class Counter {
             this.update();
         }
 
-        return;
+      
 
     }
 
