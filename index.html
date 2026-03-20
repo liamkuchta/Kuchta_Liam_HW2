@@ -16,21 +16,31 @@
     <header id="header">
         <h1 id="title">O.O.P. Counter </h1>
     </header>
-    <section class="info-panel col-span-full m-col-span-6">
-        <h2>How to use it</h2>
-        <p>Step 1 - add an empty container in the HTML <br> Step 2 - create a new counter in JS and pass in
-            the selector for that container</p>
-        <pre class="sample-code">&lt;div id="counter-container1"&gt;&lt;/div&gt;</pre>
-        <pre class="sample-code">const counter1 = new Counter('#counter-container1', 0);
-const counter2 = new Counter('#counter-container2', 8);
-const counter3 = new StepCounter('#counter-container3', 12, 5);</pre>
-
-    </section>
-
     <div class="grid-con">
-        <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
-        <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
-        <div id="counter-container3" class="counter col-span-full m-col-span-6"></div>
+        <section class="intro col-span-full m-col-span-full">
+
+
+            <p class="intro-text">This is a showcase of my JavaScript counter class. </p>
+        </section>
+
+        <section class="info-panel col-span-full m-col-span-6">
+            <h2>How to use it</h2>
+            <p>Step 1 - add an empty container in the HTML <br> Step 2 - create a new counter in JS and pass in
+                the selector for that container</p>
+            <p class="sample-code">div id="counter-container1" /div</p>
+            <p class="sample-code">const counter1 = new Counter('#counter-container1', 0);<br>
+                const counter2 = new Counter('#counter-container2', 8);<br>
+                const counter3 = new StepCounter('#counter-container3', 12, 5);</p>
+            <p>Parameters: the first value is the container selector, the second value is the starting
+                number, and the third value in StepCounter is how much it goes up or down each time.
+            </p>
+        </section>
+
+        <div class="grid-con">
+            <div id="counter-container1" class="counter col-span-full m-col-span-6"></div>
+            <div id="counter-container2" class="counter col-span-full m-col-span-6"></div>
+            <div id="counter-container3" class="counter col-span-full m-col-span-6"></div>
+        </div>
     </div>
 </body>
 
